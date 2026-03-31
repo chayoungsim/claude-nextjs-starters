@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
-import { NavItem } from "@/types"
+import type { NavItem } from "@/types"
 import { PageContainer } from "./page-container"
 
 const navItems: NavItem[] = [
@@ -75,16 +75,27 @@ export function Header() {
                 {navItems.map((item) => (
                   <NavigationMenuItem key={item.href}>
                     <NavigationMenuLink asChild>
-                      <a
-                        href={item.href}
-                        target={item.external ? "_blank" : undefined}
-                        rel={item.external ? "noopener noreferrer" : undefined}
-                        className={cn(
-                          "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-                        )}
-                      >
-                        {item.label}
-                      </a>
+                      {item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={cn(
+                            "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                          )}
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
@@ -127,17 +138,27 @@ export function Header() {
                 </SheetHeader>
                 <Separator className="my-4" />
                 <nav className="flex flex-col gap-4">
-                  {navItems.map((item) => (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      target={item.external ? "_blank" : undefined}
-                      rel={item.external ? "noopener noreferrer" : undefined}
-                      className="text-sm font-medium transition-colors hover:text-accent-foreground"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
+                  {navItems.map((item) =>
+                    item.external ? (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium transition-colors hover:text-accent-foreground"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="text-sm font-medium transition-colors hover:text-accent-foreground"
+                      >
+                        {item.label}
+                      </Link>
+                    )
+                  )}
                 </nav>
               </SheetContent>
             </Sheet>

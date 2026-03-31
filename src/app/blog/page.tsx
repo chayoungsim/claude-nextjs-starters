@@ -6,70 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { PageContainer } from "@/components/layout/page-container"
-import type { BlogPost } from "@/types"
-
-const POSTS: BlogPost[] = [
-  {
-    slug: "nextjs-16-migration",
-    title: "Next.js 16 마이그레이션 가이드",
-    description: "Next.js 15에서 16으로의 마이그레이션 과정과 Breaking Changes를 상세히 설명합니다.",
-    date: "2026-03-15",
-    category: "튜토리얼",
-    tags: ["Next.js", "마이그레이션", "가이드"],
-    readingTime: "8분",
-    content: "Next.js 16으로 업그레이드하기 위한 단계별 가이드...",
-  },
-  {
-    slug: "tailwind-v4-features",
-    title: "TailwindCSS v4 새로운 기능",
-    description: "CSS-first 방식과 @theme 문법의 새로운 기능들을 알아봅시다.",
-    date: "2026-03-10",
-    category: "CSS",
-    tags: ["Tailwind", "CSS", "v4"],
-    readingTime: "6분",
-    content: "TailwindCSS v4의 혁신적인 기능들...",
-  },
-  {
-    slug: "react-19-server-components",
-    title: "React 19 Server Components 완벽 이해",
-    description: "React Server Components의 원리와 실제 사용 방법을 배워봅시다.",
-    date: "2026-03-05",
-    category: "React",
-    tags: ["React", "Server Components"],
-    readingTime: "10분",
-    content: "React Server Components의 개념과 활용...",
-  },
-  {
-    slug: "shadcn-ui-customization",
-    title: "shadcn/ui 컴포넌트 커스터마이징",
-    description: "shadcn/ui 컴포넌트를 프로젝트에 맞게 커스터마이징하는 방법을 소개합니다.",
-    date: "2026-02-28",
-    category: "UI",
-    tags: ["shadcn", "UI", "커스터마이징"],
-    readingTime: "7분",
-    content: "shadcn/ui 커스터마이징 팁과 트릭...",
-  },
-  {
-    slug: "typescript-5-best-practices",
-    title: "TypeScript 5 Best Practices",
-    description: "TypeScript 5의 새로운 기능과 베스트 프랙티스를 알아봅시다.",
-    date: "2026-02-20",
-    category: "TypeScript",
-    tags: ["TypeScript", "Best Practices"],
-    readingTime: "9분",
-    content: "TypeScript 5에서 권장되는 코딩 패턴들...",
-  },
-  {
-    slug: "turbopack-setup-guide",
-    title: "Turbopack 설정 가이드",
-    description: "Next.js 16에서 Turbopack을 최적으로 구성하는 방법을 배워봅시다.",
-    date: "2026-02-15",
-    category: "성능",
-    tags: ["Turbopack", "성능", "빌드"],
-    readingTime: "5분",
-    content: "Turbopack으로 빌드 시간 단축하기...",
-  },
-]
+import { POSTS } from "@/data/posts"
 
 export default function BlogPage() {
   return (
