@@ -1,0 +1,105 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Next Starter" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - generic [ref=e8]: Next Starter
+      - navigation [ref=e9]:
+        - navigation "Main" [ref=e10]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e15]:
+              - link "Blog" [ref=e16] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e17]:
+              - link "Portfolio" [ref=e18] [cursor=pointer]:
+                - /url: /portfolio
+            - listitem [ref=e19]:
+              - link "Components" [ref=e20] [cursor=pointer]:
+                - /url: /components
+            - listitem [ref=e21]:
+              - link "Docs" [ref=e22] [cursor=pointer]:
+                - /url: /docs
+      - generic [ref=e23]:
+        - button "테마 토글" [disabled]:
+          - img
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: 🚀 Next.js 16 + React 19
+        - heading "빠르게 시작하는 모던 웹 개발" [level=1] [ref=e29]:
+          - text: 빠르게 시작하는
+          - text: 모던 웹 개발
+        - paragraph [ref=e30]: Next.js, React, TypeScript, TailwindCSS, shadcn/ui가 완벽하게 통합된 스타터킷. 설정 없이 바로 개발을 시작하세요.
+        - generic [ref=e31]:
+          - link "GitHub에서 보기" [ref=e32] [cursor=pointer]:
+            - /url: https://github.com
+            - img
+            - text: GitHub에서 보기
+          - link "문서 읽기" [ref=e33] [cursor=pointer]:
+            - /url: https://nextjs.org/docs
+            - text: 문서 읽기
+            - img
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - heading "포함된 기술 스택" [level=2] [ref=e37]
+          - paragraph [ref=e38]: 모든 기능이 이미 준비되어 있습니다.
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - img [ref=e43]
+              - generic [ref=e45]: Next.js 16
+            - generic [ref=e47]: Turbopack 기본값, React Compiler 내장, 번개처럼 빠른 개발
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - img [ref=e51]
+              - generic [ref=e57]: shadcn/ui
+            - generic [ref=e59]: radix-nova 스타일, 언제든 커스터마이징 가능한 컴포넌트
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - img [ref=e63]
+              - generic [ref=e65]: 다크모드
+            - generic [ref=e67]: next-themes 기반, FOUC 없는 매끄러운 테마 전환
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - img [ref=e71]
+              - generic [ref=e73]: TypeScript 5
+            - generic [ref=e75]: 엄격한 타입 체크로 런타임 에러 사전에 차단
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - img [ref=e79]
+              - generic [ref=e83]: TailwindCSS v4
+            - generic [ref=e85]: CSS-first 방식, @theme 문법으로 유연한 스타일링
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - img [ref=e89]
+              - generic [ref=e92]: Sonner
+            - generic [ref=e94]: 아름다운 토스트 알림, 사용자 경험 극대화
+      - generic [ref=e97]:
+        - heading "지금 바로 시작하세요" [level=2] [ref=e98]
+        - paragraph [ref=e99]: 설정은 모두 끝났습니다. 당신의 아이디어를 현실로 만들기만 하면 됩니다.
+        - generic [ref=e100]:
+          - link "GitHub" [ref=e101] [cursor=pointer]:
+            - /url: https://github.com
+            - img
+            - text: GitHub
+          - link "문서" [ref=e102] [cursor=pointer]:
+            - /url: https://nextjs.org/docs
+            - text: 문서
+            - img
+  - contentinfo [ref=e103]:
+    - generic [ref=e106]:
+      - paragraph [ref=e107]: © 2026 Next.js 16 Starter Kit. All rights reserved.
+      - generic [ref=e108]:
+        - link "GitHub" [ref=e109] [cursor=pointer]:
+          - /url: https://github.com
+        - link "Next.js" [ref=e110] [cursor=pointer]:
+          - /url: https://nextjs.org
+        - link "shadcn/ui" [ref=e111] [cursor=pointer]:
+          - /url: https://ui.shadcn.com
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e117] [cursor=pointer]:
+    - img [ref=e118]

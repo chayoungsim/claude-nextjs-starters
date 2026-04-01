@@ -40,10 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Claude Code 개인 설정
-.claude/
-.mcp.json
-.playwright-mcp/
+
 
 # 테스트 스크린샷
 *.png
