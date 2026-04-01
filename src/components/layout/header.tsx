@@ -105,6 +105,11 @@ export function Header() {
 
           {/* 우측 액션 */}
           <div className="flex items-center gap-2">
+            {/* 로그인 버튼 - 데스크탑 전용 */}
+            <Button asChild size="sm" className="hidden md:inline-flex">
+              <Link href="/login">로그인</Link>
+            </Button>
+
             {/* 테마 토글 - Hydration 미스매치 방지 */}
             <Button
               variant="ghost"
@@ -159,6 +164,10 @@ export function Header() {
                       </Link>
                     )
                   )}
+                  <Separator />
+                  <Button asChild size="sm">
+                    <Link href="/login">로그인</Link>
+                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>
